@@ -12,8 +12,7 @@ import { Inventory } from './inventory';
 export class AppComponent implements OnInit {
   title = 'ldb-poc';
   inventories: Inventory[];
-  displayedColumns: string[] = ['numberOfStores', 'store', 'sku', 'available'];
-  headElements = ['numberOfStores', 'store', 'sku', 'available'];
+  headElements = ['Number Of Stores', 'Store', 'Sku', 'Available'];
   resultsLength = 0;
 
   constructor(private inventoryService:InventoryService, private router: Router) {
