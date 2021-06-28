@@ -24,8 +24,8 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --if-present
-        npm run test --if-present
+        npm run build --prod
+        
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
@@ -53,4 +53,4 @@ jobs:
         app-name: 'ldbwscostpoc'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_832dc9dd3fa745a3b7c6913cdeb9a8df }}
-        package: .
+        package: ./dist/ldb-poc
